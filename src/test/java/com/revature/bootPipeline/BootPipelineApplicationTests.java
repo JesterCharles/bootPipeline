@@ -14,7 +14,7 @@ class BootPipelineApplicationTests {
 	
 	@Test
 	void personalTest() {
-		assertTrue(true);
+		assertTrue(false);
 	}
 
 }
