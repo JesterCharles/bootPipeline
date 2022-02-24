@@ -11,7 +11,7 @@ public class BootPipelineApplication {
 
 	@GetMapping("/test")
 	public String testEndpoint() {
-		return "Hey from the CI/CD pipeline! He did the thing!";
+		return "Hey from the CI/CD pipeline! He did the thing! This is cool";
 	}
 	
 	public static void main(String[] args) {
