@@ -27,3 +27,12 @@ steps:
     goals: 'spring-boot:build-image'
     publishJUnitResults: false
     jdkVersionOption: '1.8'
+
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'BasicFreePlox(1)(b29c4330-9bc3-4d48-b4ab-a9ba06ef9a33)'
+    azureContainerRegistry: '{"loginServer":"bootpipelinejester.azurecr.io", "id" : "/subscriptions/b29c4330-9bc3-4d48-b4ab-a9ba06ef9a33/resourceGroups/monsterLabDemo/providers/Microsoft.ContainerRegistry/registries/bootPipelineJester"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    qualifyImageNames: false
+    action: 'Run a Docker Compose command'
