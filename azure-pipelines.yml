@@ -30,7 +30,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'bootPipelineJester'
+    containerRegistry: 'bootpipelinejester'
     repository: 'bootpipeline'
     command: 'push'
     tags: 'latest'
