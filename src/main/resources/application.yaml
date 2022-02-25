@@ -1,10 +1,21 @@
 server:
   port: 8080
   servlet:
-    context-path: /bootPipeline
+    context-path: /testing
+
 spring:
   application:
-    name: bootPipeline
+    name: monsterlab-api
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://;serverName=azure-server-demo-jester.database.windows.net;databaseName=azure-db-demo-jester;encrypt=true
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
 management:
   endpoints:
     web:
