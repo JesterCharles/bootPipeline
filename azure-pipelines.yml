@@ -36,6 +36,6 @@ steps:
 
 - task: AzureWebAppContainer@1
   inputs:
-    azureSubscription: 'BasicFreePlox(2)(b29c4330-9bc3-4d48-b4ab-a9ba06ef9a33)'
+    azureSubscription: 'BasicFreePlox(b29c4330-9bc3-4d48-b4ab-a9ba06ef9a33)'
     appName: 'bootPipelineJester'
     containers: 'monsterlabjesterr.azurecr.io/springbootdemo'
