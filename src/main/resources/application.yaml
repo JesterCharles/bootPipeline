@@ -1,26 +1,17 @@
 server:
-  port: 8080
-  servlet:
-    context-path: /testing
+  port: 5000
 
 spring:
   application:
     name: monsterlab-api
   datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://;serverName=azure-server-demo-jester.database.windows.net;databaseName=azure-db-demo-jester;encrypt=true
+    driver-class-name: org.h2.Driver
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
 
   jpa:
-    database-platform: org.hibernate.dialect.SQLServerDialect
+    database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
     hibernate:
       ddl-auto: create-drop
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - "beans"
-          - "health"
-          - "info"
