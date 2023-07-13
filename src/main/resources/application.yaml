@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: monsterlab-api
+    name: bootPipeline-api
   datasource:
     driver-class-name: org.h2.Driver
     url: {DB_URL}
