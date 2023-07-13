@@ -6,9 +6,9 @@ spring:
     name: monsterlab-api
   datasource:
     driver-class-name: org.h2.Driver
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASS}
+    url: {DB_URL}
+    username: {DB_USER}
+    password: {DB_PASS}
 
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
