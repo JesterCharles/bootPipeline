@@ -4,6 +4,8 @@
 
 This document provides detailed information on the DevOps procedures, along with brief descriptions of AWS Services & SonarCloud. The final section is an in-depth overview of start to finish, how to deploy a Spring Boot Application to AWS CodePipeline. Please expand each section for more details. 
 
+![](./CI_CD%20Pipeline%20w_%20AWS.png)
+
 <details>
 <summary style="font-size: 24px;">DevOps and Agile</summary>
 
