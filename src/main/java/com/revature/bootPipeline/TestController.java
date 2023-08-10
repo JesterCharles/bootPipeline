@@ -33,14 +33,20 @@ public class TestController {
                 .httpOnly(true)
                 .maxAge(300)
                 .build();
+        final HttpCookie cookie2 = ResponseCookie.from("user", "userID")
+                .path("/")
+                .httpOnly(true)
+                .maxAge(300)
+                .build();
         return ResponseEntity.ok()
                 .header(HttpHeaders.SET_COOKIE, cookie.toString())
+                .header(HttpHeaders.SET_COOKIE, cookie2.toString())
                 .body("Logged in");
     }
 
     @GetMapping("/loggedInAs")
-    public String checkUser(@CookieValue String role){
-        return "Hey! I'm logged in as a " + role;
+    public String checkUser(@CookieValue String role, @CookieValue String user){
+        return "Hey! I'm " + user + " logged in as a " + role;
     }
 
 }
