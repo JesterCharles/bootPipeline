@@ -31,11 +31,13 @@ public class TestController {
         final HttpCookie cookie = ResponseCookie.from("role", "admin")
                 .path("/")
                 .httpOnly(true)
+                .secure(true)
                 .maxAge(300)
                 .build();
         final HttpCookie cookie2 = ResponseCookie.from("user", "userID")
                 .path("/")
                 .httpOnly(true)
+                .secure(true)
                 .maxAge(300)
                 .build();
         return ResponseEntity.ok()
